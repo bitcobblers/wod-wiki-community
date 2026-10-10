@@ -103,6 +103,13 @@ export interface GenerateSeedOptions {
   markdownDir?: string;
   /** Optional playground template file — the host passes its own; standalone builds omit the `template` chunk. */
   templateFile?: string;
+  /**
+   * Row path recorded for the template chunk (the runtime derives the
+   * template note's id from it, so it must stay stable across builds). The
+   * host pins its historical in-repo path; defaults to the path relative to
+   * `corpusRoot`.
+   */
+  templateRowPath?: string;
   outDir?: string;
   /**
    * Explicit manifest version (tests). Defaults to this repo's git commit
@@ -570,10 +577,9 @@ export function generateSeed(options: GenerateSeedOptions = {}): GenerateSeedRes
   const paths = collectCorpusMarkdown(markdownDir);
   const groups = partitionIntoChunks(paths);
   if (options.templateFile && existsSync(options.templateFile)) {
-    groups.push({
-      id: TEMPLATE_CHUNK_ID,
-      files: [relative(corpusRoot, options.templateFile).split('\\').join('/')],
-    });
+    const templateRowPath = options.templateRowPath
+      ?? relative(corpusRoot, options.templateFile).split('\\').join('/');
+    groups.push({ id: TEMPLATE_CHUNK_ID, files: [templateRowPath] });
   }
   passMs.scan = Date.now() - tScan;
 
@@ -586,9 +592,12 @@ export function generateSeed(options: GenerateSeedOptions = {}): GenerateSeedRes
 
   const tWrite = Date.now();
   for (const { id, files } of groups) {
+    // The template chunk's row path is the host-pinned historical identity,
+    // not a path inside this repo — read it from the template file itself.
+    const templateSource = id === TEMPLATE_CHUNK_ID ? options.templateFile : undefined;
     const rows: SeedRow[] = files.map((p) => ({
       path: p,
-      content: readFileSync(join(corpusRoot, p), 'utf8'),
+      content: readFileSync(templateSource ?? join(corpusRoot, p), 'utf8'),
     }));
     const bytes = Buffer.from(JSON.stringify(rows), 'utf8');
     const sha = sha256Hex(bytes);
