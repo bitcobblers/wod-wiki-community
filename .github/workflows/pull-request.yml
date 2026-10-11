@@ -33,12 +33,13 @@ jobs:
           # latest published 0.11.x), so dependency caching has nothing to key
           # on — leave cache disabled.
 
-      # The wod CLI ships as a devDependency; npm install puts it on PATH.
+      # The wod CLI ships as a devDependency; npx resolves its local bin
+      # (npm install alone does not put node_modules/.bin on PATH).
       - run: npm install
 
       # Validation gate: parity gate + dashboard validation; non-zero fails the MR.
       - id: build
-        run: wod build --out dist
+        run: npx wod build --out dist
 
       # Rendered once, reused by both the step summary and the sticky PR comment.
       - name: Render manifest summary
