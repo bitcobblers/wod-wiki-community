@@ -6,8 +6,10 @@ community system. Every MR goes through the same validation the build runs.
 ## Quick path
 
 1. Fork, branch, add/edit files under `markdown/` only.
-2. `bun install && bun run validate` — tests + full compile must pass.
-3. Open the MR. CI runs the same `bun run validate`.
+2. `npm install && npx wod build` — the full compile + validation gates
+   must pass.
+3. Open the MR. CI runs the same `wod build` and posts a manifest summary
+   comment on the MR.
 
 ## Corpus rules (enforced by the build)
 
@@ -19,33 +21,35 @@ community system. Every MR goes through the same validation the build runs.
 - **Feeds** — `markdown/feeds/<slug>/<yyyy-mm-dd>/<item>.md`, one item per
   date directory.
 - **Canvas guides** — live in the wod-wiki repo (`markdown/canvas/`), not
-  here; this repo's compiler still compiles them when the app builds its
-  core seed. Community seeds MAY carry routable pages the same way
-  (frontmatter `template: canvas` + `route: /...`); fragments/snippets
-  without a route stay out of the Library index by design.
+  here; the app's core-seed build compiles them there. Community seeds MAY
+  carry routable pages the same way (frontmatter `template: canvas` +
+  `route: /...`); fragments/snippets without a route stay out of the
+  Library index by design.
 - **Dashboards** — locked #899 note format; widget types and `$token`
-  references are validated by `test/dashboard-seeds.test.ts` (WQL bodies
-  must parse).
+  references are validated by the build itself (WQL bodies must parse).
 - **Efforts** — frontmatter documents (`slug`, `label`, `aliases`,
   `baseAttributes.met` > 0, optional `discipline`/`intensityTier`).
   Unregistered effort labels referenced by workouts are reported by
-  `bun run build:scaffold`, which drafts stubs under
+  `wod build --scaffold`, which drafts stubs under
   `markdown/efforts/discovered/` for curation.
 - A new top-level directory under `markdown/` **fails the build** (parity
-  gate) until the compiler's corpus partition learns it — open an issue or
-  extend `chunkIdFor` in `src/compiler.ts`.
+  gate) until the compiler's corpus partition learns it — open an issue in
+  the wod-wiki repo (the compiler lives in
+  `@bitcobblers/wod-wiki-engine`, the `wod build` engine).
 
 ## What lands in an MR
 
 - Content edits (the common case): only `markdown/` changes. The manifest
   and chunk hashes regenerate at release time — never commit `dist/`.
-- Parser/compiler changes: rare, need discussion — they affect every
-  consumer of the artifacts. Keep `src/contract.ts` shape-compatible with
-  the app's `apps/playground/src/types/seed.ts`.
+- Compiler/contract changes: live in the wod-wiki repo
+  (`@bitcobblers/wod-wiki-engine`); they need discussion there — they
+  affect every consumer of the artifacts. Keep the seed contract
+  shape-compatible with the app's `apps/playground/src/types/seed.ts`.
 
 ## Release flow (maintainers)
 
-Merges to `main` advance `manifest.version` (commit count). To cut a
-release the app should pin: `git tag vX.Y.Z`, then run `bun run build` and
-point the app's sync at the new tag/commit. The app diffs manifests to
-decide which chunks to re-import.
+Merges to `main` advance `manifest.version` (commit count) and deploy the
+built `dist/` to GitHub Pages automatically. To cut a release the app
+should pin: `git tag vX.Y.Z` — the next main build stamps the manifest
+with `git describe`. The app diffs manifests to decide which chunks to
+re-import.
