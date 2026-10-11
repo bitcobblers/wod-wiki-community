@@ -78,10 +78,14 @@ Tag releases with `git tag v1.2.0` to give `versionLabel` a semver anchor.
 
 ## How the app consumes this
 
-The wod-wiki app imports this corpus through the engine's `generateSeed` API
-(`scripts/sync-seed.ts` there) — no sibling checkout required. The app's
-runtime then fetches `manifest.json` + chunks over HTTP and applies them to
-IndexedDB.
+The wod-wiki app does NOT bundle this corpus. This repo's `main` pipeline
+builds the corpus with `wod build` and deploys the artifacts to this repo's
+GitHub Pages (above). The app's runtime fetches that published
+`manifest.json` + chunks over HTTP (the default "Community" seed source in
+`seedSync.ts`) and applies them to IndexedDB; per-chunk sha256 checkpoints
+mean only changed chunks re-import. The app repo only bundles its own core
+seed (playground canvas pages) — community content always flows through
+this Pages publish.
 
 ## Content tooling
 
