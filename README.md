@@ -25,7 +25,7 @@ src/
   contract.ts        manifest/chunk contract shared with the app (shape-compatible copy)
   git-version.ts     version derivation from git history
   report.ts          dist/report.html build benchmark page
-vendor/@bitcobblers/ prebuilt wod-wiki parser packages (see below)
+vendor/@bitcobblers/ prebuilt wod-wiki parser packages (gitignored, see below)
 dist/                build output (gitignored): manifest.json, chunks/, report.html
 ```
 
@@ -73,15 +73,28 @@ Tag releases with `git tag v1.2.0` to give `versionLabel` a semver anchor.
 writes the result to `apps/playground/public/seed/`. The app's runtime then
 fetches `manifest.json` + chunks over HTTP and applies them to IndexedDB.
 
-## Vendored parsers
+## Vendored parsers (local-only, gitignored)
 
 `vendor/@bitcobblers/` carries prebuilt `wod-wiki-core/lang/wql` dists so
 this repo builds standalone and its block derivations stay bit-identical
 with the app runtime. The registry versions of these packages have drifted
 from the app monorepo — do not replace the vendored copies with registry
-versions. To refresh after parser changes in the app repo, rebuild the
-packages there (`bun run build` in `packages/<name>`) and re-copy `dist/`
-(minus `*.map`).
+versions.
+
+`vendor/` is **not checked in**. After a fresh clone, populate it from a
+sibling wod-wiki checkout, then install:
+
+```sh
+./scripts/vendor-parsers.sh ../wod-wiki
+bun install
+```
+
+To refresh after parser changes in the app repo, rebuild the packages there
+(`bun run --cwd packages/<name> build`) and re-run the script.
+
+ponytail: temporary mechanism — once the monorepo packages are republished
+properly, this repo switches to registry version pins and `vendor/` +
+the script go away.
 
 ## Content tooling
 
