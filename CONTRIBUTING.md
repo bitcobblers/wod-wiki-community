@@ -1,6 +1,6 @@
 # Contributing content
 
-Merge requests here add programs, workouts, guides, and efforts to the
+Merge requests here add programs, workouts, dashboards, and efforts to the
 community system. Every MR goes through the same validation the build runs.
 
 ## Quick path
@@ -18,9 +18,11 @@ community system. Every MR goes through the same validation the build runs.
   own seed chunk.
 - **Feeds** — `markdown/feeds/<slug>/<yyyy-mm-dd>/<item>.md`, one item per
   date directory.
-- **Canvas guides** — routable pages need frontmatter `template: canvas` and
-  `route: /guide/...`; fragments/snippets without a route stay out of the
-  Library index by design.
+- **Canvas guides** — live in the wod-wiki repo (`markdown/canvas/`), not
+  here; this repo's compiler still compiles them when the app builds its
+  core seed. Community seeds MAY carry routable pages the same way
+  (frontmatter `template: canvas` + `route: /...`); fragments/snippets
+  without a route stay out of the Library index by design.
 - **Dashboards** — locked #899 note format; widget types and `$token`
   references are validated by `test/dashboard-seeds.test.ts` (WQL bodies
   must parse).

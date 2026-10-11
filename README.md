@@ -4,18 +4,23 @@ The Wod.Wiki community content corpus and the seed compiler that turns it
 into versioned artifacts the [wod-wiki](https://github.com/bitcobblers/wod-wiki)
 app imports at boot.
 
-This repo is the single home for bundled content: workout programs
-(collections), dated programming (feeds), guide/syntax pages (canvas),
-prebuilt dashboards, and the effort registry. Content changes land here as
-merge requests; the compiler validates them and stamps every build with this
-repo's git version so the app (and you) can tell exactly what changed and
-what needs syncing.
+This repo is the home for community bundled content: workout programs
+(collections), dated programming (feeds), prebuilt dashboards, and the
+effort registry. Content changes land here as merge requests; the compiler
+validates them and stamps every build with this repo's git version so the
+app (and you) can tell exactly what changed and what needs syncing.
+
+The app's own playground pages (the `canvas` corpus — home, guide, syntax,
+WQL presets) live in the wod-wiki repo under `markdown/canvas/` and are
+compiled into the app's **core** seed by the same compiler; this repo
+builds the **community** seed. The app imports both as independent seed
+sources (per-source manifests, versions, and checkpoints), and any other
+seed library laid out as `markdown/<corpus>/…` can be consumed the same way.
 
 ## Layout
 
 ```
 markdown/            the corpus (the only thing most MRs touch)
-  canvas/            routable guide/syntax pages (frontmatter route: + template: canvas)
   collections/       named workout libraries — one dir per catalog, README + items
   feeds/             dated programming — feeds/<slug>/<yyyy-mm-dd>/<item>.md
   dashboards/        prebuilt dashboard notes (locked #899 format)
@@ -39,8 +44,9 @@ bun run validate # test + build — what CI runs
 ```
 
 The **parity gate** is the core validation: every `.md` under `markdown/`
-must belong to a known corpus (`canvas | dashboards | efforts | collections |
-feeds`) and land in exactly one chunk, or the build fails. A new top-level
+must belong to a known corpus (`dashboards | efforts | collections |
+feeds` — plus `canvas` when a seed carries routable pages) and land in
+exactly one chunk, or the build fails. A new top-level
 directory cannot silently bypass the pipeline.
 
 `bun run build:scaffold` additionally scans workout blocks for effort labels
