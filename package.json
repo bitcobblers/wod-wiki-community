@@ -11,6 +11,6 @@
     "docs:check": "node scripts/check-docs-links.cjs"
   },
   "devDependencies": {
-    "@bitcobblers/wod-wiki-engine": "^0.11.43"
+    "@bitcobblers/wod-wiki-engine": "latest"
   }
 }
