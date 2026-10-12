@@ -1,7 +1,5 @@
 node_modules/
 dist/
 
-# Vendored parser packages — local-only, recreated from a sibling wod-wiki
-# checkout via scripts/vendor-parsers.sh. Goes away once the monorepo
-# packages are republished and this repo pins registry versions.
-vendor/
+# The engine devDep tracks the `latest` dist-tag — a lockfile would freeze it.
+package-lock.json

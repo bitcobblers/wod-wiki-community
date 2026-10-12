@@ -1,33 +1,16 @@
 {
-  "name": "wod-wiki-seed",
+  "name": "wod-wiki-community",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Wod.Wiki community content corpus (workout programs, collections, feeds, guides, dashboards, efforts) and the seed compiler that validates and compiles it into versioned seed artifacts consumed by the wod-wiki app.",
+  "description": "Wod.Wiki community content corpus (workout programs, collections, feeds, guides, dashboards, efforts), validated and compiled into versioned seed artifacts by the wod CLI from @bitcobblers/wod-wiki-engine.",
   "scripts": {
-    "build": "bun src/compiler.ts",
-    "build:scaffold": "bun src/compiler.ts --scaffold",
-    "test": "bun test",
-    "validate": "bun test && bun src/compiler.ts",
-    "docs:check": "bun scripts/check-docs-links.cjs"
+    "build": "wod build",
+    "build:scaffold": "wod build --scaffold",
+    "validate": "wod build",
+    "docs:check": "node scripts/check-docs-links.cjs"
   },
   "devDependencies": {
-    "@bitcobblers/wod-wiki-core": "file:vendor/@bitcobblers/wod-wiki-core",
-    "@bitcobblers/wod-wiki-lang": "file:vendor/@bitcobblers/wod-wiki-lang",
-    "@bitcobblers/wod-wiki-wql": "file:vendor/@bitcobblers/wod-wiki-wql",
-    "@codemirror/autocomplete": "^6.18.6",
-    "@codemirror/language": "^6.10.8",
-    "@codemirror/state": "^6.5.2",
-    "@lezer/common": "^1.2.3",
-    "@lezer/highlight": "^1.2.1",
-    "@lezer/lr": "^1.4.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "uuid": "^11.1.0"
-  },
-  "overrides": {
-    "@bitcobblers/wod-wiki-core": "file:vendor/@bitcobblers/wod-wiki-core",
-    "@bitcobblers/wod-wiki-lang": "file:vendor/@bitcobblers/wod-wiki-lang",
-    "@bitcobblers/wod-wiki-wql": "file:vendor/@bitcobblers/wod-wiki-wql"
+    "@bitcobblers/wod-wiki-engine": "latest"
   }
 }

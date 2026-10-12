@@ -1,18 +1,19 @@
-# wod-wiki-seed
+# wod-wiki-community
 
-The Wod.Wiki community content corpus and the seed compiler that turns it
+The Wod.Wiki community content corpus, built via the `wod` CLI
+(from [`@bitcobblers/wod-wiki-engine`](https://www.npmjs.com/package/@bitcobblers/wod-wiki-engine))
 into versioned artifacts the [wod-wiki](https://github.com/bitcobblers/wod-wiki)
 app imports at boot.
 
 This repo is the home for community bundled content: workout programs
 (collections), dated programming (feeds), prebuilt dashboards, and the
-effort registry. Content changes land here as merge requests; the compiler
+effort registry. Content changes land here as merge requests; the CLI
 validates them and stamps every build with this repo's git version so the
 app (and you) can tell exactly what changed and what needs syncing.
 
 The app's own playground pages (the `canvas` corpus — home, guide, syntax,
 WQL presets) live in the wod-wiki repo under `markdown/canvas/` and are
-compiled into the app's **core** seed by the same compiler; this repo
+compiled into the app's **core** seed by the same CLI; this repo
 builds the **community** seed. The app imports both as independent seed
 sources (per-source manifests, versions, and checkpoints), and any other
 seed library laid out as `markdown/<corpus>/…` can be consumed the same way.
@@ -25,33 +26,37 @@ markdown/            the corpus (the only thing most MRs touch)
   feeds/             dated programming — feeds/<slug>/<yyyy-mm-dd>/<item>.md
   dashboards/        prebuilt dashboard notes (locked #899 format)
   efforts/           effort registry documents (frontmatter: slug/label/aliases/baseAttributes)
-src/
-  compiler.ts        the seed compiler (parity gate → content-hashed chunks)
-  contract.ts        manifest/chunk contract shared with the app (shape-compatible copy)
-  git-version.ts     version derivation from git history
-  report.ts          dist/report.html build benchmark page
-vendor/@bitcobblers/ prebuilt wod-wiki parser packages (gitignored, see below)
-dist/                build output (gitignored): manifest.json, chunks/, report.html
+dist/                build output (gitignored)
 ```
 
 ## Build
 
 ```sh
-bun install   # once
-bun run build # compiles markdown/ → dist/ (manifest + chunks + report.html)
-bun test      # parity gate, partition, determinism, dashboard-seed validation
-bun run validate # test + build — what CI runs
+npm install      # once — installs the wod CLI (devDependency @bitcobblers/wod-wiki-engine)
+npx wod build    # or: npm run build — compiles markdown/ → dist/ (manifest + chunks + report.html)
+npm run validate # the same build — what CI runs on every MR
 ```
 
-The **parity gate** is the core validation: every `.md` under `markdown/`
-must belong to a known corpus (`dashboards | efforts | collections |
-feeds` — plus `canvas` when a seed carries routable pages) and land in
-exactly one chunk, or the build fails. A new top-level
+Validation is the **parity gate** plus dashboard-note validation, both run
+inside `wod build`. The parity gate is the core check: every `.md` under
+`markdown/` must belong to a known corpus (`dashboards | efforts |
+collections | feeds` — plus `canvas` when a seed carries routable pages) and
+land in exactly one chunk, or the build fails. A new top-level
 directory cannot silently bypass the pipeline.
 
-`bun run build:scaffold` additionally scans workout blocks for effort labels
-missing from the registry and scaffolds `markdown/efforts/discovered/*.md`
-stubs for curation.
+`wod build --scaffold` (`npm run build:scaffold`) additionally scans workout
+blocks for effort labels missing from the registry and scaffolds
+`markdown/efforts/discovered/*.md` stubs for curation.
+
+## Publishing
+
+Every push to `main` builds the corpus and deploys `dist/` to GitHub Pages at
+**https://bitcobblers.github.io/wod-wiki-community/**. `manifest.json` is
+fetched with `no-cache` so the app always sees the latest manifest, while
+chunk filenames are content-hashed and can be cached forever. Consume the
+seed in the app via **Settings → Sync → add custom seed source** with that
+URL. PRs get a validation comment with the manifest summary (version + chunk
+table).
 
 ## Versioning
 
@@ -73,40 +78,20 @@ Tag releases with `git tag v1.2.0` to give `versionLabel` a semver anchor.
 
 ## How the app consumes this
 
-`wod-wiki/scripts/sync-seed.ts` imports the compiler from this repo
-(expected as a sibling checkout at `../wod-wiki-seed`, override with
-`WOD_WIKI_SEED_DIR`), passes its playground template as an extra chunk, and
-writes the result to `apps/playground/public/seed/`. The app's runtime then
-fetches `manifest.json` + chunks over HTTP and applies them to IndexedDB.
-
-## Vendored parsers (local-only, gitignored)
-
-`vendor/@bitcobblers/` carries prebuilt `wod-wiki-core/lang/wql` dists so
-this repo builds standalone and its block derivations stay bit-identical
-with the app runtime. The registry versions of these packages have drifted
-from the app monorepo — do not replace the vendored copies with registry
-versions.
-
-`vendor/` is **not checked in**. After a fresh clone, populate it from a
-sibling wod-wiki checkout, then install:
-
-```sh
-./scripts/vendor-parsers.sh ../wod-wiki
-bun install
-```
-
-To refresh after parser changes in the app repo, rebuild the packages there
-(`bun run --cwd packages/<name> build`) and re-run the script.
-
-ponytail: temporary mechanism — once the monorepo packages are republished
-properly, this repo switches to registry version pins and `vendor/` +
-the script go away.
+The wod-wiki app does NOT bundle this corpus. This repo's `main` pipeline
+builds the corpus with `wod build` and deploys the artifacts to this repo's
+GitHub Pages (above). The app's runtime fetches that published
+`manifest.json` + chunks over HTTP (the default "Community" seed source in
+`seedSync.ts`) and applies them to IndexedDB; per-chunk sha256 checkpoints
+mean only changed chunks re-import. The app repo only bundles its own core
+seed (playground canvas pages) — community content always flows through
+this Pages publish.
 
 ## Content tooling
 
-- `bun run docs:check` — verify corpus-internal markdown links resolve.
-- `bun scripts/omf.mjs` — inventory/prune frontmatter properties across the corpus.
-- `bun scripts/migrate-corpus-tags.ts` — bulk frontmatter tag migrations.
+- `npm run docs:check` — verify corpus-internal markdown links resolve.
+- `node scripts/omf.mjs` — inventory/prune frontmatter properties across the corpus.
+- `node scripts/migrate-corpus-tags.ts` — bulk frontmatter tag migrations.
 
 ## License
 
