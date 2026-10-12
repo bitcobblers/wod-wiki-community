@@ -35,9 +35,9 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: 24
-          # No lockfile is committed (the engine devDep must float to the
-          # latest published 0.11.x), so dependency caching has nothing to key
-          # on — leave cache disabled.
+          # No lockfile is committed (the engine devDep tracks the `latest`
+          # dist-tag), so dependency caching has nothing to key on — leave
+          # cache disabled.
 
       # The wod CLI ships as a devDependency; npx resolves its local bin
       # (npm install alone does not put node_modules/.bin on PATH).
