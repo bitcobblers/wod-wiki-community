@@ -11,7 +11,7 @@ format: intervals
 
 ```time
 3 x 60m Acceleration @ 90%
-*1:30 Rest
+1:30 Rest
 ```
 
 ## Notes

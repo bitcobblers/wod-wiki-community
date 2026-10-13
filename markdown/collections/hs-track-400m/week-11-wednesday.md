@@ -10,7 +10,7 @@ format: intervals
 ## Workout
 
 ```time
-5 x 300m Run @ :41.5
+5 x 300m Run @41.5
 *2:30 Rest
 ```
 

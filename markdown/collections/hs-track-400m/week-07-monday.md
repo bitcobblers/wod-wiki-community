@@ -10,11 +10,11 @@ format: intervals
 ## Workout
 
 ```time
-3 x 300m Run @ :52
-*2:00 Rest
+3 x 300m Run @52
+2:00 Rest
 
-2 x 200m Run @ :31
-*1:30 Rest
+2 x 200m Run @31
+1:30 Rest
 
 1 x 500m Run
 ```

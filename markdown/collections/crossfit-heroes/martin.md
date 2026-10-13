@@ -12,7 +12,7 @@ intent: benchmark
 A partner chipper alternating rowing distances with high-rep sets of deadlifts, thrusters, push-ups, pull-ups, sit-ups, and wall-ball shots.
 
 ```time
-For time, with a partner:
+For time, with a partner
 2000m Row
 100 Deadlifts Bodyweight
 50 Thrusters 95lb

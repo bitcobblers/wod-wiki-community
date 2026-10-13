@@ -12,21 +12,21 @@ format: intervals
 ```time
 (3)
   30m Acceleration @ 90%
-  *1:30 Rest
+  1:30 Rest
   30m Acceleration @ 90%
-  *1:30 Rest
-  30m Acceleration @ 90%
-  *2:30 Rest
-  30m Acceleration @ 90%
-  *1:30 Rest
-  30m Acceleration @ 90%
-  *1:30 Rest
+  1:30 Rest
   30m Acceleration @ 90%
   *2:30 Rest
   30m Acceleration @ 90%
-  *1:30 Rest
+  1:30 Rest
   30m Acceleration @ 90%
-  *1:30 Rest
+  1:30 Rest
+  30m Acceleration @ 90%
+  *2:30 Rest
+  30m Acceleration @ 90%
+  1:30 Rest
+  30m Acceleration @ 90%
+  1:30 Rest
   30m Acceleration @ 90%
   *2:30 Rest
 ```

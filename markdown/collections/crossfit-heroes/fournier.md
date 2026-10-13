@@ -12,7 +12,7 @@ intent: benchmark
 A couplet of shoulder-to-overheads and sumo deadlift high pulls separated by heavy arm-over-arm sled pulls.
 
 ```time
-For time:
+For time
 50 Shoulder-to-Overheads 115lb
 50ft Sled Pull
 40 Burpees

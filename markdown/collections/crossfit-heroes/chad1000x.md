@@ -12,7 +12,7 @@ intent: benchmark
 One thousand weighted box step-ups with a ruck, created with Sara Wilkinson and Rogue Fitness.
 
 ```time
-For time:
+For time
 1000 Weighted Box Step Ups 20in
 // wear a 45lb ruck
 ```

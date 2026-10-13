@@ -66,13 +66,13 @@ January runs two rotations of the same weekly template (first session Monday or 
 
 ```time
 4 x 80m Run
-*1:30 Rest
+1:30 Rest
 
 2 x 150m Run
-*1:30 Rest
+1:30 Rest
 
 4 x 80m Run
-*1:30 Rest
+1:30 Rest
 ```
 
 - 90s between reps, 5min between sets.
@@ -82,26 +82,26 @@ January runs two rotations of the same weekly template (first session Monday or 
 ```time
 (2)
   4 x 200m Run
-  *2:00 Rest
+  2:00 Rest
   4 x 200m Run
-  *2:00 Rest
+  2:00 Rest
 ```
 
 ```time
 (2)
   3 x 200m Run
-  *2:00 Rest
+  2:00 Rest
   3 x 200m Run
-  *2:00 Rest
+  2:00 Rest
 ```
 
 ```time
-200m Run @ :25
-*1:30 Rest
-200m Run @ :24
-*1:30 Rest
-200m Run @ :24
-*1:30 Rest
+200m Run @25
+1:30 Rest
+200m Run @24
+1:30 Rest
+200m Run @24
+1:30 Rest
 ```
 
 - 30s between reps and 2min between sets on the set work; the 3 × 200m progression runs :25-:24-:24 with 90s rest.
@@ -119,8 +119,8 @@ By athlete strength:
 - Broken 400:
 
 ```time
-300m Run @ :40
-*30s Rest
+300m Run @40
+30s Rest
 100m Run
 ```
 

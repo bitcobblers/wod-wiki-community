@@ -12,7 +12,7 @@ intent: benchmark
 A weighted-vest mile sandwiched around three rounds of burpees, power cleans, and front squats, closed with a second mile.
 
 ```time
-For time:
+For time
 1 Mile Run 20lb Vest
 (3)
   30 Burpees

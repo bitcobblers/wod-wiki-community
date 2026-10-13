@@ -12,7 +12,7 @@ intent: benchmark
 A partner workout whose 56-second buy-in and 56-rep movements honor two Apache pilots, finished with a 5,600-meter run.
 
 ```time
-For time, with a partner:
+For time, with a partner
 56s Handstand Hold
 56 Burpees
 56 Flutter Kicks

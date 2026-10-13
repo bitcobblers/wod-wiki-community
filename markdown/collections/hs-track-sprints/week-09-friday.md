@@ -10,10 +10,10 @@ format: intervals
 ## Workout
 
 ```time
-4 x 150m Run @ Race Pace
+4 x 150m Run // Race Pace
 *4:00 Rest
 
-4 x 120m Run @ Race Pace
+4 x 120m Run // Race Pace
 *4:00 Rest
 ```
 

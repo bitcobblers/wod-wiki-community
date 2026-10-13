@@ -12,7 +12,7 @@ intent: benchmark
 U.S. Navy Special Warfare Operator 2nd Class (SEAL) Nicholas Spehar, 24, died August 6, 2011, in Wardak Province, Afghanistan, when his helicopter was shot down. One hundred thrusters, 100 chest-to-bar pull-ups, and a 6-mile run, partitioned as needed.
 
 ```time
-For Time:
+For Time
   100 Thrusters 135lb
   100 Chest-to-Bar Pullups
   6-mile Run

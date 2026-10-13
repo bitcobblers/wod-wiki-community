@@ -10,8 +10,8 @@ format: intervals
 ## Workout
 
 ```time
-8 x 150m Run @ :21.5
-*2:00 Rest
+8 x 150m Run @21.5
+2:00 Rest
 ```
 
 ## Notes

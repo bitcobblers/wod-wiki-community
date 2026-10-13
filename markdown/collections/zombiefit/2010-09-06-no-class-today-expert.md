@@ -26,7 +26,7 @@ Run 1/4 mile | row 250m | bike 2 miles
 ### Traceur — Expert
 ```time
 (8) :20 Tabata
-  Quadrupedal Movement *
+  Quadrupedal Movement
 1:00 Rest
 (8) :20 Tabata
   Box Jumps 30in

@@ -12,7 +12,7 @@ intent: benchmark
 A five-round partner workout pairing double-unders and toes-to-bars with clean and jerks and shared runs.
 
 ```time
-With a partner:
+With a partner
 (5)
   24 Double Unders each
   19 Toes-to-Bars total

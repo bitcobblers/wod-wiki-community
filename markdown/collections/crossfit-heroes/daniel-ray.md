@@ -12,7 +12,7 @@ intent: benchmark
 Five rounds of double-kettlebell carries and lunges around strict pull-ups, push-ups, squats, and runs, honoring a combat controller.
 
 ```time
-For time:
+For time
 (5)
   25ft Double KB Front Rack Lunge 53lb
   9 Strict Pullups

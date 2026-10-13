@@ -21,7 +21,7 @@ format: for-time
 ```
 
 ```time
-^ AMRAP Unbroken Wall Balls
+AMRAP Unbroken Wall Balls
 ```
 
 ## Notes

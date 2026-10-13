@@ -16,7 +16,7 @@ A 20-minute couplet AMRAP interrupted by double-unders every two minutes, follow
   10 Chest-to-Bar Pullups
   10 DB Thrusters 50lb
 // every 2 minutes, including 0:00: stop and do 40 Double Unders
-Then:
+Then
 2 Mile Run
 ```
 

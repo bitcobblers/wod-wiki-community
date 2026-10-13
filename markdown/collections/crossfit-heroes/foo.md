@@ -12,7 +12,7 @@ intent: benchmark
 Sgt. Gary "Foo" Morales, 35, of the St. Lucie County Sheriff's Office in Florida, a 12-year veteran and Air Force veteran, was fatally shot during a traffic stop on February 28, 2013. A 13-rep bench-press buy-in, then a 20-minute AMRAP of pull-ups, double-unders, squat clean thrusters, and sit-ups.
 
 ```time
-13 Bench Presses 170lb, then 20:00 AMRAP:
+13 Bench Presses 170lb, then 20:00 AMRAP
   7 Chest-to-Bar Pullups
   77 Double Unders
   2 Squat Clean Thrusters 170lb

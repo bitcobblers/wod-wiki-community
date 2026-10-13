@@ -10,10 +10,10 @@ format: intervals
 ## Workout
 
 ```time
-1 x 500m Run @ 1:27-1:35
-2 x 400m Run @ 1:08-1:14
-3 x 200m Run @ :32-:35
-*2:00 Rest
+1 x 500m Run // 1:27-1:35
+2 x 400m Run // 1:08-1:14
+3 x 200m Run // :32-:35
+2:00 Rest
 ```
 
 ## Notes

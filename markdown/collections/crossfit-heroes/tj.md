@@ -11,7 +11,7 @@ date: 2016-07-03
 Honors Marine Pfc. Anthony "TJ" Antell Jr. Repeat a triplet of 10 bench presses, 10 strict pull-ups, and a max set of thrusters until 100 thrusters are complete.
 
 ```time
-(?)
+?
   10 Bench Press 185lb
   10 Strict Pullups
   ? Thrusters 135lb

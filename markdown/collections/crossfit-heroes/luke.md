@@ -12,7 +12,7 @@ intent: benchmark
 Marine Staff Sgt. Leon H. Lucas Jr., 32, assigned to the 3rd Battalion, 4th Marine Regiment, died August 1, 2011, of wounds from an enemy grenade attack in Helmand Province, Afghanistan. A long chipper: seven 400-meter runs separating five barbell and gymnastic movements.
 
 ```time
-For Time:
+For Time
   400m Run
   15 Clean and Jerks 155lb
   400m Run

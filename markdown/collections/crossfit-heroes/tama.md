@@ -12,7 +12,7 @@ intent: benchmark
 A single-arm farmers-carry chipper broken by 31-rep sets of toes-to-bars, push-ups, front squats, and hang power cleans.
 
 ```time
-For time:
+For time
 800m Single-Arm Farmers Carry 45lb
 31 Toes-to-Bars
 31 Pushups

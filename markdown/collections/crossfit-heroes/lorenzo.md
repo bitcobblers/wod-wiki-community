@@ -12,7 +12,7 @@ intent: benchmark
 A run-bookended couplet: five rounds of push-ups, medicine-ball cleans, and burpees between two 1,000-meter runs.
 
 ```time
-For time:
+For time
 1000m Run
 (5)
   15 Pushups

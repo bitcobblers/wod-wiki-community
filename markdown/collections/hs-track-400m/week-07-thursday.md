@@ -11,7 +11,7 @@ format: intervals
 
 ```time
 (2)
-  5 x 150m Run @ :20.5-:22.5
+  5 x 150m Run // :20.5-:22.5
   *5:00 Rest
 ```
 

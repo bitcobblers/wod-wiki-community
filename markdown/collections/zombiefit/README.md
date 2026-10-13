@@ -21,34 +21,34 @@ Each year below lists its WODs by day; same-day tiers (beginner/advanced/expert)
 
 October–December — 150 WODs. The site launch: five posts a week from early October, every day split into the three tier files.
 
-[](:feed{catalog:zombiefit} from 2009-01-01 to 2009-12-31 by {date})!
+[](:feed{catalog:zombiefit} by {date} from 2009-01-01 to 2009-12-31)!
 
 ## 2010
 
 January–December — 656 WODs. The first full year, and the largest: anniversary and milestone posts (50,000 visitors, one-year anniversary) alongside the daily programming.
 
-[](:feed{catalog:zombiefit} from 2010-01-01 to 2010-12-31 by {date})!
+[](:feed{catalog:zombiefit} by {date} from 2010-01-01 to 2010-12-31)!
 
 ## 2011
 
 January–December — 402 WODs. Daily tiered WODs continue; occasional second posts on the same day carry a numeric suffix in the filename.
 
-[](:feed{catalog:zombiefit} from 2011-01-01 to 2011-12-31 by {date})!
+[](:feed{catalog:zombiefit} by {date} from 2011-01-01 to 2011-12-31)!
 
 ## 2012
 
 January–December — 199 WODs. Posting frequency tapers through the year as the site winds down.
 
-[](:feed{catalog:zombiefit} from 2012-01-01 to 2012-12-31 by {date})!
+[](:feed{catalog:zombiefit} by {date} from 2012-01-01 to 2012-12-31)!
 
 ## 2013
 
 June–July — 18 WODs. The final archived tiered sessions before the site went dark.
 
-[](:feed{catalog:zombiefit} from 2013-01-01 to 2013-12-31 by {date})!
+[](:feed{catalog:zombiefit} by {date} from 2013-01-01 to 2013-12-31)!
 
 ## 2020
 
 April — 3 WODs. A short-lived revival posted to the archived site early in the COVID lockdowns.
 
-[](:feed{catalog:zombiefit} from 2020-01-01 to 2020-12-31 by {date})!
+[](:feed{catalog:zombiefit} by {date} from 2020-01-01 to 2020-12-31)!

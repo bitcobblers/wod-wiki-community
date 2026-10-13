@@ -12,11 +12,11 @@ format: intervals
 ```time
 (3)
   300m Run
-  *2:00 Rest
+  2:00 Rest
   200m Run
-  *2:00 Rest
+  2:00 Rest
   100m Run
-  *1:30 Rest
+  1:30 Rest
 ```
 
 ## Notes

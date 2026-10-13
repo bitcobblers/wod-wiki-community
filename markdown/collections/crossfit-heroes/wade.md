@@ -12,7 +12,7 @@ intent: benchmark
 A weighted-vest couplet of strict gymnastics wrapped in 1,200-meter runs.
 
 ```time
-For time:
+For time
 1200m Run 20lb Vest
 (4)
   12 Strict Pullups

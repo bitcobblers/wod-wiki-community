@@ -12,7 +12,7 @@ intent: benchmark
 A long bodyweight chipper of burpees, push-ups, walking lunges, and squats, run between quarter-mile runs.
 
 ```time
-For time:
+For time
 50 Burpees
 400m Run
 100 Pushups

@@ -11,9 +11,9 @@ format: intervals
 
 ```time
 (3)
-  300m Run @ :50
+  300m Run @50
   50m Walk
-  300m Run @ :50
+  300m Run @50
   400m Walk
 ```
 

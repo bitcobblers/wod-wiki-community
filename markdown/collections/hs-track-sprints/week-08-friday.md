@@ -10,15 +10,15 @@ format: intervals
 ## Workout
 
 ```time
-600m Run @ 1:50
+600m Run // 1:50
 600m Walk
-500m Run @ 1:30
+500m Run // 1:30
 500m Walk
-400m Run @ 1:10
+400m Run // 1:10
 400m Walk
-300m Run @ :50
+300m Run @50
 300m Walk
-200m Run @ :32
+200m Run @32
 200m Walk
 ```
 

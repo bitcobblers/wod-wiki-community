@@ -12,7 +12,7 @@ intent: benchmark
 Row-or-run intervals around seven rounds of deadlifts, push-ups, and box step-ups, released March 6, 2026 alongside the companion hero workouts listed below.
 
 ```time
-For time:
+For time
 565m Row
 (7)
   9 Deadlifts 185lb
@@ -49,7 +49,7 @@ Matthew S. Locke, an Army National Guard veteran of Afghanistan and veteran law-
 ### Estrada
 
 ```time
-For time:
+For time
 100 Box Step Ups 20in 50lb Backpack
 (3)
   800m Run
@@ -72,7 +72,7 @@ For time:
 ### Nunez
 
 ```time
-For time:
+For time
 800m Run
 60 Burpee Box Jump Overs 20in
 50 Pullups
@@ -91,7 +91,7 @@ For time:
 ### Drew
 
 ```time
-For time, all with a weight vest:
+For time, all with a weight vest
 // Kraus
 200m Run
 30 Pullups

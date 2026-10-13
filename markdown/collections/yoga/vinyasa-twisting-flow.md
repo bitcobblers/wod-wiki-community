@@ -27,7 +27,7 @@ Hold guidance per pose is listed in the breakdown below (minimum breath counts f
 
 ```time
 (1) Opening
-  Child's Pose
+  Childs Pose
   Downward Dog
   Forward Fold
   Mountain Pose
@@ -49,7 +49,7 @@ Hold guidance per pose is listed in the breakdown below (minimum breath counts f
   Crescent Lunge
   Warrior 2
   Reverse Warrior
-  Child's Pose
+  Childs Pose
 
 (1) Twisting Series
   Prayer Twist
@@ -60,7 +60,7 @@ Hold guidance per pose is listed in the breakdown below (minimum breath counts f
 
 (1) Inversion
   Crow Pose
-  Child's Pose
+  Childs Pose
 
 (1) Lunge Series
   Lunge Twist

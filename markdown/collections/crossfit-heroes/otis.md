@@ -13,7 +13,7 @@ A 15-minute ascending triplet of back squats, shoulder presses, and deadlifts, a
 
 ```time
 15:00 AMRAP
-(1-2-3-Etc)
+1-2-3-Etc
   Back Squats 1.5x Bodyweight
   Shoulder Presses 0.75x Bodyweight
   Deadlifts 1.5x Bodyweight

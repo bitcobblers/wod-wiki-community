@@ -16,7 +16,7 @@ format: strength
 ```
 
 ```time
-^ AMRAP
+AMRAP
   25 Barbell Push Press
   25 Over the Bar Burpees
   25 Bent Over Rows

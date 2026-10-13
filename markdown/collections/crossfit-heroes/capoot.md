@@ -12,7 +12,7 @@ intent: benchmark
 Officer James Lowell Capoot, 45, a Vallejo Police Department veteran since 1993 and SWAT officer twice decorated for courage, died November 17, 2011, while chasing an armed bank-robbery suspect. Push-up sets descend 100-75-50-25 as the runs climb from 800 to 2,000 meters.
 
 ```time
-For Time:
+For Time
   100 Pushups
   800m Run
   75 Pushups
