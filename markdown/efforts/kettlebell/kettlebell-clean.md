@@ -13,4 +13,6 @@ baseAttributes:
   met: 8.0
   discipline: kettlebell
   intensityTier: high
+equipment:
+  - kettlebell
 ---

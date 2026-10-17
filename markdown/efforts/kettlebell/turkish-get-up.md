@@ -13,4 +13,6 @@ baseAttributes:
   met: 5.0
   discipline: kettlebell
   intensityTier: moderate
+equipment:
+  - kettlebell
 ---

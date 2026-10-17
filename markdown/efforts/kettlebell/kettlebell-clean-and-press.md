@@ -17,4 +17,6 @@ baseAttributes:
   discipline: kettlebell
   intensityTier: moderate
 registrySource: bundled
+equipment:
+  - kettlebell
 ---

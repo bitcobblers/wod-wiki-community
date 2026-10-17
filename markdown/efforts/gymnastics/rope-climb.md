@@ -9,4 +9,6 @@ baseAttributes:
   discipline: gymnastics
   intensityTier: moderate
 registrySource: bundled
+equipment:
+  - climbing-rope
 ---

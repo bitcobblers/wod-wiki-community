@@ -11,4 +11,6 @@ baseAttributes:
   met: 5.0
   discipline: strength
   intensityTier: moderate
+equipment:
+  - barbell
 ---

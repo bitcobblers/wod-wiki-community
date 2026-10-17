@@ -12,4 +12,6 @@ baseAttributes:
   met: 10.0
   discipline: cycling
   intensityTier: high
+equipment:
+  - air-bike
 ---

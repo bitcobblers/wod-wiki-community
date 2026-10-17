@@ -39,8 +39,9 @@ jobs:
           # dist-tag), so dependency caching has nothing to key on — leave
           # cache disabled.
 
-      # The wod CLI ships as a devDependency; npx resolves its local bin
-      # (npm install alone does not put node_modules/.bin on PATH).
+      # The wod CLI ships as the @bitcobblers/wod-wiki-tools devDependency;
+      # npx resolves its local bin (npm install alone does not put
+      # node_modules/.bin on PATH).
       - run: npm install
 
       - run: npx wod build --out dist

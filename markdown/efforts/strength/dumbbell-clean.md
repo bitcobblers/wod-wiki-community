@@ -9,4 +9,6 @@ baseAttributes:
   met: 7.0
   discipline: strength
   intensityTier: high
+equipment:
+  - dumbbell
 ---

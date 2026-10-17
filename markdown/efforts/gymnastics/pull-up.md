@@ -18,4 +18,6 @@ baseAttributes:
   met: 5.0
   discipline: gymnastics
   intensityTier: moderate
+equipment:
+  - pull-up-bar
 ---

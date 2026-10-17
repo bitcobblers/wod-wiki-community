@@ -19,4 +19,6 @@ baseAttributes:
   discipline: strength
   intensityTier: moderate
 registrySource: bundled
+equipment:
+  - clubs
 ---

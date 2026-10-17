@@ -12,4 +12,6 @@ baseAttributes:
   met: 12.0
   discipline: gymnastics
   intensityTier: high
+equipment:
+  - jump-rope
 ---

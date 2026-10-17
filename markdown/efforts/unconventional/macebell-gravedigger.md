@@ -11,4 +11,6 @@ baseAttributes:
   discipline: strength
   intensityTier: moderate
 registrySource: bundled
+equipment:
+  - macebell
 ---

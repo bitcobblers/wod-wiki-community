@@ -28,21 +28,26 @@ community system. Every MR goes through the same validation the build runs.
 - **Dashboards** — locked #899 note format; widget types and `$token`
   references are validated by the build itself (WQL bodies must parse).
 - **Efforts** — frontmatter documents (`slug`, `label`, `aliases`,
-  `baseAttributes.met` > 0, optional `discipline`/`intensityTier`).
-  Unregistered effort labels referenced by workouts are reported by
-  `wod build --scaffold`, which drafts stubs under
+  `baseAttributes.met` > 0, optional `discipline`/`intensityTier`, and an
+  optional `equipment:` slug list). Unregistered effort labels referenced by
+  workouts are reported by `wod build --scaffold`, which drafts stubs under
   `markdown/efforts/discovered/` for curation.
+- **Equipment** — `markdown/equipment/<slug>.md`: frontmatter documents
+  (`type: equipment`, `slug`, `label`, `aliases`, optional body). The
+  compiler resolves equipment mentions in workout blocks against this
+  registry (by slug, label, or alias) and emits per-block equipment rows;
+  an effort's `equipment:` array auto-tags the blocks that use it.
 - A new top-level directory under `markdown/` **fails the build** (parity
   gate) until the compiler's corpus partition learns it — open an issue in
   the wod-wiki repo (the compiler lives in
-  `@bitcobblers/wod-wiki-engine`, the `wod build` engine).
+  `@bitcobblers/wod-wiki-tools`, the `wod build` CLI).
 
 ## What lands in an MR
 
 - Content edits (the common case): only `markdown/` changes. The manifest
   and chunk hashes regenerate at release time — never commit `dist/`.
 - Compiler/contract changes: live in the wod-wiki repo
-  (`@bitcobblers/wod-wiki-engine`); they need discussion there — they
+  (`@bitcobblers/wod-wiki-tools`); they need discussion there — they
   affect every consumer of the artifacts. Keep the seed contract
   shape-compatible with the app's `apps/playground/src/types/seed.ts`.
 

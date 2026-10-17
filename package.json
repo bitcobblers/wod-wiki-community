@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Wod.Wiki community content corpus (workout programs, collections, feeds, guides, dashboards, efforts), validated and compiled into versioned seed artifacts by the wod CLI from @bitcobblers/wod-wiki-engine.",
+  "description": "Wod.Wiki community content corpus (workout programs, collections, feeds, guides, dashboards, efforts, equipment), validated and compiled into versioned seed artifacts by the wod CLI from @bitcobblers/wod-wiki-tools.",
   "scripts": {
     "build": "wod build",
     "build:scaffold": "wod build --scaffold",
@@ -11,6 +11,9 @@
     "docs:check": "node scripts/check-docs-links.cjs"
   },
   "devDependencies": {
-    "@bitcobblers/wod-wiki-engine": "latest"
+    "@bitcobblers/wod-wiki-engine": "latest",
+    "@bitcobblers/wod-wiki-tools": "latest",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
   }
 }

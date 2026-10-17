@@ -12,4 +12,6 @@ baseAttributes:
   met: 8.0
   discipline: cycling
   intensityTier: moderate
+equipment:
+  - bike-erg
 ---

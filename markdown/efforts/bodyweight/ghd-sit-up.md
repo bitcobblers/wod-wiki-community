@@ -10,4 +10,6 @@ baseAttributes:
   discipline: bodyweight
   intensityTier: moderate
 registrySource: bundled
+equipment:
+  - ghd
 ---

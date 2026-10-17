@@ -10,4 +10,6 @@ baseAttributes:
   met: 8.0
   discipline: strength
   intensityTier: high
+equipment:
+  - barbell
 ---

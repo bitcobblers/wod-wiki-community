@@ -15,4 +15,6 @@ baseAttributes:
   met: 7.0
   discipline: rowing
   intensityTier: high
+equipment:
+  - rower
 ---

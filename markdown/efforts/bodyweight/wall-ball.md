@@ -11,4 +11,6 @@ baseAttributes:
   met: 8.0
   discipline: bodyweight
   intensityTier: high
+equipment:
+  - medicine-ball
 ---

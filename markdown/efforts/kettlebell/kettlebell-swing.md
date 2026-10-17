@@ -16,6 +16,8 @@ baseAttributes:
   met: 9.8
   discipline: kettlebell
   intensityTier: high
+equipment:
+  - kettlebell
 ---
 Kettlebell swings train hip extension and cyclical power production.
 

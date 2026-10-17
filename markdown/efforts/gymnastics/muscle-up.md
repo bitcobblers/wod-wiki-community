@@ -14,4 +14,6 @@ baseAttributes:
   met: 8.0
   discipline: gymnastics
   intensityTier: high
+equipment:
+  - gymnastic-rings
 ---

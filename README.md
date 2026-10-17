@@ -1,7 +1,7 @@
 # wod-wiki-community
 
 The Wod.Wiki community content corpus, built via the `wod` CLI
-(from [`@bitcobblers/wod-wiki-engine`](https://www.npmjs.com/package/@bitcobblers/wod-wiki-engine))
+(from [`@bitcobblers/wod-wiki-tools`](https://www.npmjs.com/package/@bitcobblers/wod-wiki-tools))
 into versioned artifacts the [wod-wiki](https://github.com/bitcobblers/wod-wiki)
 app imports at boot.
 
@@ -25,14 +25,15 @@ markdown/            the corpus (the only thing most MRs touch)
   collections/       named workout libraries — one dir per catalog, README + items
   feeds/             dated programming — feeds/<slug>/<yyyy-mm-dd>/<item>.md
   dashboards/        prebuilt dashboard notes (locked #899 format)
-  efforts/           effort registry documents (frontmatter: slug/label/aliases/baseAttributes)
+  efforts/           effort registry documents (frontmatter: slug/label/aliases/baseAttributes/equipment)
+  equipment/         equipment registry documents (frontmatter: slug/label/aliases) resolved against workouts
 dist/                build output (gitignored)
 ```
 
 ## Build
 
 ```sh
-npm install      # once — installs the wod CLI (devDependency @bitcobblers/wod-wiki-engine)
+npm install      # once — installs the wod CLI (devDependency @bitcobblers/wod-wiki-tools)
 npx wod build    # or: npm run build — compiles markdown/ → dist/ (manifest + chunks + report.html)
 npm run validate # the same build — what CI runs on every MR
 ```

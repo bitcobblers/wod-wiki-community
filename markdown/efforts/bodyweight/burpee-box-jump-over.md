@@ -9,4 +9,6 @@ baseAttributes:
   discipline: bodyweight
   intensityTier: moderate
 registrySource: bundled
+equipment:
+  - plyo-box
 ---

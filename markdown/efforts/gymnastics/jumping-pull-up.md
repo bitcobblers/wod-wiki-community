@@ -12,4 +12,6 @@ baseAttributes:
   discipline: gymnastics
   intensityTier: moderate
 registrySource: bundled
+equipment:
+  - pull-up-bar
 ---

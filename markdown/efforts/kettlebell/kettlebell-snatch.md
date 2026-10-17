@@ -15,4 +15,6 @@ baseAttributes:
   met: 12.0
   discipline: kettlebell
   intensityTier: high
+equipment:
+  - kettlebell
 ---

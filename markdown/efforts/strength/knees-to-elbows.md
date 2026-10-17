@@ -8,4 +8,6 @@ baseAttributes:
   discipline: strength
   intensityTier: moderate
 registrySource: bundled
+equipment:
+  - pull-up-bar
 ---

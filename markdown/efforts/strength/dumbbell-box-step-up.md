@@ -9,4 +9,7 @@ baseAttributes:
   discipline: strength
   intensityTier: moderate
 registrySource: bundled
+equipment:
+  - dumbbell
+  - plyo-box
 ---
